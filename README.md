@@ -1,5 +1,5 @@
 # ChordScaleGen
-Chords and Scales Generator
+Chords and Scales Generator.\n
 This tiny Python script create random chord and scale progressions.
 The lenght of the random progression is choosen by the user.
 Minimal plain text support is given.
