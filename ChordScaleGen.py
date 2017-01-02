@@ -26,21 +26,21 @@ def tone_prog(n):
     tone_list = []
     tones = ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"]
     for t in range(0, n):
-        tone_list.append(tones[random.randint(0, len(tones) - 1)])
+        tone_list.append(random.choice(tones))
     return tone_list
 
 def chord_prog(n):
     chord_list = []
     chords = [ "Major", "Minor", "Diminished", "Augmented", "Maj7", "Min7", "Min/Maj7", "7", "7sus4", "Min7b5", "Dim7", "7alt", "7b9", "Maj7#5", "7#11", "7b5", "7sus4b2", "Maj6", "Min6", "7b9#9", "7#5" ]
     for c in range(0, int(prog_len)):
-        chord_list.append(chords[random.randint(0, len(chords) - 1)])
+        chord_list.append(random.choice(chords))
     return chord_list
 
 def scale_prog(n):
     scale_list = []
     scales = [ "Major", "Natural Minor", "Melodic Minor", "Harmonic Minor", "Harmonic Major", "Whole Tone", "Half-Whole"]
     for s in range(0, n):
-        scale_list.append(scales[random.randint(0, len(scales) - 1)])
+        scale_list.append(random.choice(scales))
     return scale_list
 
 def export_ptext(tn, spec, repeats):
