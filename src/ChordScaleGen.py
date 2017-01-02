@@ -55,7 +55,6 @@ def export_ptext(tn, spec, repeats):
         out_file.write(tn[l] + " " + spec[l] + "\n")
     out_file.close
 
-<<<<<<< HEAD:src/ChordScaleGen.py
 print
 print "             ChordScaleGen              "
 print "Chords and scales generator, Version 0.2"
@@ -74,7 +73,6 @@ msg = (
 print(textwrap.fill(msg, width=width))
 print(dotted_line)
 
->>>>>>> NewFeatures:src/ChordScaleGen.py
 mode = raw_input("Generagete chords(c) or scales(s)? ")
 prog_len = raw_input("Set number of iterations: ")
 
