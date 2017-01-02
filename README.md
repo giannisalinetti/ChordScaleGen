@@ -7,8 +7,11 @@ Minimal plain text support is given.
 
 **Unix usage:**
 
-chmod 755 /working/dir/ChordScaleGen.py
+```$ python /working/dir/ChordScaleGen.py```
 
-/working/dir/ChordScaleGen.py
+or
+
+```$ chmod 755 /working/dir/ChordScaleGen.py
+$ /working/dir/ChordScaleGen.py```
 
 Plain text files will be dropped here in the working dir (TODO: custom folders).
