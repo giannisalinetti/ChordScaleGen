@@ -1,5 +1,7 @@
 #!/usr/bin/python
 
+from __future__ import print_function
+
 #    Chords and scales random generator. Version 0.1.
 #    Giovan Battista Salinetti 2015/03/02
 #
@@ -21,6 +23,7 @@
 #    Export to file facilities (html, csv, xml, improve plain text)
 
 import random
+import textwrap
 
 def tone_prog(n):
     tone_list = []
@@ -47,44 +50,58 @@ def export_ptext(tn, spec, repeats):
     name = raw_input("Choose ouput file name, .txt will be appended: ")
     file_name = name + ".txt"
     out_file = open( file_name, "w")
-    out_file.write("ChordScaleGen v0.1\n\n")
+    out_file.write("ChordScaleGen v0.3\n\n")
     for l in range(0, repeats):
         out_file.write(tn[l] + " " + spec[l] + "\n")
     out_file.close
 
+<<<<<<< HEAD:src/ChordScaleGen.py
 print
 print "             ChordScaleGen              "
 print "Chords and scales generator, Version 0.2"
 print
+=======
+width = 72
+dotted_line = '-' * width
+print(dotted_line)
+print("\033[1m" + "ChordScaleGen" + "\033[0m")
+print("\033[1m" + "Chords and scales generator, Version 0.3" + "\033[0m")
+msg = (
+    "This tool helps musicians to create random sequences "
+    "of chords and scale to practice on instruments. Choose "
+    "between chord or scale generation and the lenght of "
+    "iteration (how much long the sequence will be")
+print(textwrap.fill(msg, width=width))
+print(dotted_line)
+
+>>>>>>> NewFeatures:src/ChordScaleGen.py
 mode = raw_input("Generagete chords(c) or scales(s)? ")
 prog_len = raw_input("Set number of iterations: ")
 
 if mode == "c" or mode == "C":
-    print "Printing chord chart..."
-    print
+    print("\033[1m" + "Printing chord chart..." + "\033[0m" + "\n")
+    print(dotted_line)
     chord_out = chord_prog(int(prog_len))
     tone_out = tone_prog(int(prog_len))
     for i in range(0, int(prog_len)):
-         print tone_out[i],  chord_out[i]
-    print
-    txt_exp = raw_input("Export to .txt file? ")
+         print(tone_out[i], chord_out[i])
+    print(dotted_line)
+    txt_exp = raw_input("\n" + "Export sequence to text file? Yes(y)/No(n) ")
     if txt_exp == 'y' or txt_exp == 'Y':
          export_ptext(tone_out, chord_out, int(prog_len))
 
 elif mode == "s" or mode == "S":
-    print "Printing scale chart..."
-    print
+    print("\033[1m" + "Printing scale chart..." + "\033[0m" + "\n")
+    print(dotted_line)
     scale_out = scale_prog(int(prog_len))
     tone_out = tone_prog(int(prog_len))
     for i in range(0, int(prog_len)):
-         print tone_out[i], scale_out[i]
-    print
-    txt_exp = raw_input("Export to .txt file? ")
+         print(tone_out[i], scale_out[i])
+    print(dotted_line)
+    txt_exp = raw_input("\n" + "Export sequence to text file? Yes(y)/No(n) ")
     if txt_exp == 'y' or txt_exp == 'Y':
          export_ptext(tone_out, scale_out, int(prog_len))
 
 else:
-    print "Wrong choice. You must press \"c/C\" for chords or \"s/S\" for scales."
-
-print
-print "Goodbye."
+    print("Wrong choice. You must press \"c/C\" for chords or \"s/S\" for scales.")
+print("Goodbye.")
