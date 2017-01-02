@@ -55,11 +55,6 @@ def export_ptext(tn, spec, repeats):
         out_file.write(tn[l] + " " + spec[l] + "\n")
     out_file.close
 
-print
-print "             ChordScaleGen              "
-print "Chords and scales generator, Version 0.2"
-print
-=======
 width = 72
 dotted_line = '-' * width
 print(dotted_line)
