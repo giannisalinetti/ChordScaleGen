@@ -54,7 +54,7 @@ def export_ptext(tn, spec, repeats):
 
 print
 print "             ChordScaleGen              "
-print "Chords and scales generator, Version 0.1"
+print "Chords and scales generator, Version 0.2"
 print
 mode = raw_input("Generagete chords(c) or scales(s)? ")
 prog_len = raw_input("Set number of iterations: ")
