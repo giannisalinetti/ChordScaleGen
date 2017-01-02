@@ -1,11 +1,11 @@
 # ChordScaleGen
-Chords and Scales Generator.
+## Random chords and scales Generator
 
-This tiny Python script create random chord and scale progressions.
+This tiny Python utility creates random chord and scale progressions.
 The lenght of the random progression is choosen by the user.
 Minimal plain text support is given.
 
-Unix usage:
+**Unix usage:**
 
 chmod 755 /working/dir/ChordScaleGen.py
 
