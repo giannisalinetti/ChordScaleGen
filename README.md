@@ -7,7 +7,7 @@ Minimal plain text support is given.
 
 **Unix usage:**
 
-```$ python /working/dir/ChordScaleGen.py```
+    $ python /working/dir/ChordScaleGen.py
 
 or
 
